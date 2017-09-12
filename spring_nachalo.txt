@@ -1,0 +1,9 @@
+Inversion of Control
+Dependency Injection
+IoC container
+
+context.xml to resource 
+
+
+ApplicationContext context = new ClassPathXmlApplicationContext("context.xml");
+		Robot robotT100 = (RobotT1000) context.getBean("robot");
