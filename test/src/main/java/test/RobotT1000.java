@@ -1,13 +1,19 @@
 package test;
 
-import java.beans.ConstructorProperties;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
+
+@Component
 
 public class RobotT1000 implements Robot {
 
-	public String name;
-	public int id;
-	public int year;
+	public String name = "T!===";
+	public int id = 222;
+	public int year = 120;
 
+	@Autowired
 	private Leg leg;
 
 	public Leg getLeg() {
@@ -16,12 +22,6 @@ public class RobotT1000 implements Robot {
 
 	public void setLeg(Leg leg) {
 		this.leg = leg;
-	}
-
-	@ConstructorProperties("ids")
-	public RobotT1000(int id) {
-		this.id = id;
-
 	}
 
 	public String getName() {
@@ -39,4 +39,15 @@ public class RobotT1000 implements Robot {
 		System.out.println("my leg " + leg.getLeg());
 	}
 
+	@Bean
+	private Leg test(@Qualifier("legBean") Leg mLeg) {
+		System.out.println("ich bins");
+		return new Leg();
+	}
+
+	@Bean
+	@Qualifier("mLeg")
+	public Leg leg() {
+		return new Leg();
+	}
 }
