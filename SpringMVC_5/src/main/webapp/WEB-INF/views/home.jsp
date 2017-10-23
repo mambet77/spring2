@@ -14,10 +14,9 @@
 
 	<form class="box login">
 		<fieldset class="boxBody">
-			<label>Usernamed</label> <input type="text" tabindex="1"
+			<label>Username</label> <input type="text" tabindex="1"
 				placeholder="PremiumPixel" required> <label></label>
 		</fieldset>
 	</form>
-
 </body>
 </html>
