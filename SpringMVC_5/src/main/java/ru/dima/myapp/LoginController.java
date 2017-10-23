@@ -26,6 +26,8 @@ public class LoginController {
 		if (user.isAdmin())
 			return new ModelAndView("main_admin", "user", user);
 		return new ModelAndView("main", "user", user);
+		
+		
 		// return new ModelAndView("main"); //geht auch
 
 	}
