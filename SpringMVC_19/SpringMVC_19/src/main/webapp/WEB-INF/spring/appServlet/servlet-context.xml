@@ -60,5 +60,6 @@
 		<property name="maxUploadSize" value="10000000" />
 	</bean>
 
+<!--  --> <!-- <bean id="fileValidator" class="ru.javabegin.training.objects.FileValidator" />   -->
 
 </beans>
