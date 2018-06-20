@@ -2,7 +2,7 @@ package ru.javabegin.training.objects;
 
 import org.springframework.web.multipart.MultipartFile;
 
-public class UploadedFile  {
+public class UploadedFile {
 
 	private MultipartFile file;
 
@@ -10,7 +10,7 @@ public class UploadedFile  {
 		return file;
 	}
 
-	public void setFile(MultipartFile file) {  
-		  this.file = file;  
-	}  
+	public void setFile(MultipartFile file) {
+		this.file = file;
+	}
 }
